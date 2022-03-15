@@ -1,0 +1,20 @@
+{
+  "extends": [
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:prettier/recommended"
+  ],
+  "parserOptions": {
+    "sourceType": "module",
+    "parser": "babel-eslint",
+    "ecmaVersion": 2018
+  },
+  "overrides": [
+    {
+      "files": ["webpack-common.config.js", "webpack-dev.config.js", "webpack-prod.config.js"],
+      "rules": {
+        "@typescript-eslint/no-var-requires": ["off"]
+      }
+    }
+  ]
+}
