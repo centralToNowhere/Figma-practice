@@ -1,0 +1,18 @@
+@use "/src/styles/colors"
+@use "/src/styles/mixins"
+@use "/src/styles/breakpoints"
+
+.button
+  width: 200px
+  height: 55px
+  border-radius: 100px
+  font-family: Montserrat, sans-serif
+  font-size: 14px
+  font-weight: 600
+  border: 0
+
+  &_primary
+    background: colors.$light
+
+  &_secondary
+    background: colors.$accent

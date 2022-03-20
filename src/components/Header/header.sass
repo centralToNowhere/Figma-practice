@@ -1,16 +1,32 @@
 @use "/src/styles/colors"
+@use "/src/styles/breakpoints"
+@use "/src/styles/mixins"
 
-header
-  height: 100px
+.header-container
   background: colors.$dark
+
+.header
+  height: 100px
   display: flex
   align-items: center
   justify-content: space-between
   color: colors.$light
   padding: 0 100px
+  max-width: 1280px
+  margin: 0 auto
 
-  .logo
+  @include mixins.media-breakpoint-max(breakpoints.$xl-min)
+    padding: 0 40px
+
+.header__left-group
+  display: flex
+  align-items: center
+  gap: 40px
+
+.header__logo
+  a
     font-family: Montserrat, sans-serif
     font-weight: 700
     font-size: 24px
     color: colors.$accent
+    white-space: nowrap

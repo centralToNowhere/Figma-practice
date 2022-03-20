@@ -1,0 +1,46 @@
+@use "/src/styles/mixins"
+@use "/src/styles/breakpoints"
+@use "/src/styles/colors"
+
+.sidebar
+  display: flex
+  flex-direction: column
+  padding: 10px 20px
+  gap: 10px
+
+  .nav-link
+    display: block
+
+.nav-sidebar
+  display: none
+
+  @include mixins.media-breakpoint-max(breakpoints.$xl-min)
+    display: block
+
+  @include mixins.media-breakpoint-max(breakpoints.$xs-min)
+    color: colors.$dark
+
+  &__toggle
+    background: transparent
+    padding: 0
+    border: none
+    color: colors.$accent
+    display: block
+
+  &__menu
+    position: absolute
+    background: colors.$light
+    z-index: 1
+    opacity: 0
+    margin-top: 35px
+    margin-left: -100%
+    border-radius: 10px
+    width: calc(100% - 80px)
+    transition: opacity .3s ease-in-out 0s, margin-left .3s ease-in-out 0s
+
+    a
+      color: colors.$dark
+
+  &__menu_toggled
+    opacity: 1
+    margin-left: 0

@@ -5,7 +5,7 @@ export const About: FC = () => {
   return (
     <>
       <Header />
-      <div>About</div>
+      <main>About</main>
     </>
   );
 };

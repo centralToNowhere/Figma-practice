@@ -1,0 +1,129 @@
+@use "/src/styles/colors"
+@use "/src/styles/mixins"
+@use "/src/styles/breakpoints"
+
+.homepage
+  background: transparent
+
+  .nav-sidebar__toggle
+
+    @include mixins.media-breakpoint-max(breakpoints.$xs-min)
+      color: colors.$dark
+
+.decoration
+  display: flex
+  width: 100%
+  justify-content: center
+  position: absolute
+  z-index: -1
+
+  &__dark-rect
+    width: 980px
+    height: 696px
+    flex-grow: 1
+    background: colors.$dark
+
+    @include mixins.media-breakpoint-max(breakpoints.$xs-min)
+      background: colors.$accent
+
+  &__rect-right
+    width: 300px
+    height: 489px
+    flex-grow: 1
+    background: colors.$accent
+
+.home
+  width: 100%
+  position: relative
+  margin: 0 auto
+  max-width: 1280px
+
+  &__promo-section
+    display: flex
+    margin-top: 56px
+    padding: 0 62px 0 97px
+    justify-content: space-between
+    position: relative
+    align-items: flex-start
+
+    @include mixins.media-breakpoint-max(breakpoints.$md-min)
+      padding: 0 40px
+
+  &__promo-text
+    color: colors.$light
+    padding-top: 32px
+
+  &__rect-image
+    padding-left: 60px
+    max-width: calc(100% - 60px)
+    z-index: -1
+
+    @include mixins.media-breakpoint-max(breakpoints.$xl-min)
+      width: 429px
+      position: absolute
+      right: 62px
+      z-index: -1
+
+    @include mixins.media-breakpoint-max(breakpoints.$lg-min)
+      filter: brightness(25%)
+
+    @include mixins.media-breakpoint-max(breakpoints.$sm-min)
+      padding-left: 20px
+      max-width: calc(100% - 20px)
+      right: 20px
+
+  &__heading
+    white-space: pre-wrap
+    font-family: Poppins, sans-serif
+    font-weight: 700
+    font-size: 53px
+    line-height: 60px
+    min-width: 552px
+    margin-bottom: 7px
+
+    @include mixins.media-breakpoint-max(breakpoints.$md-min)
+      font-size: 36px
+      line-height: 1.2
+      min-width: 0
+
+    @include mixins.media-breakpoint-max(breakpoints.$sm-min)
+      font-size: 24px
+
+  &__text
+    font-family: Montserrat, sans-serif
+    font-weight: 600
+    font-size: 14px
+    max-width: 519px
+    line-height: 32px
+
+  &__buttons
+    display: flex
+    flex-wrap: wrap
+    gap: 34px
+    padding-top: 43px
+
+    @include mixins.media-breakpoint-max(breakpoints.$sm-min)
+      justify-content: center
+
+  &__rect-bottom
+    position: absolute
+    width: 350px
+    height: 383px
+    top: 202px
+    right: 17.7%
+    background: colors.$accent
+    border-radius: 10px
+    z-index: -1
+
+    @include mixins.media-breakpoint-max(breakpoints.$md-min)
+      right: 22%
+
+    @include mixins.media-breakpoint-max(breakpoints.$sm-min)
+      right: 0
+
+    @include mixins.media-breakpoint-max(breakpoints.$xs-min)
+      background: black
+      width: 100%
+      border-radius: 0
+
+

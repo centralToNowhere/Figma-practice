@@ -5,3 +5,11 @@
     src: url($path + $file + '.eot?#iefix') format('embedded-opentype'), url($path + $file + '.woff') format('woff'), url($path + $file + '.ttf') format('truetype'), url($path + $file + '.svg##{$svg}') format('svg')
     font-weight: $weight
     font-style: $style
+
+@mixin media-breakpoint-max($threshold)
+  @media (max-width: $threshold - 0.02)
+    @content
+
+@mixin media-breakpoint-min($threshold)
+  @media (min-width: $threshold)
+    @content

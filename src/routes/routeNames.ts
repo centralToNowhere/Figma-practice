@@ -3,4 +3,7 @@ export const routeNames = {
   about: "/about",
   expertise: "/expertise",
   contact: "/contact",
+  portfolio: "/portfolio",
+  product: "/product",
+  blog: "/blog",
 };

@@ -5,7 +5,7 @@ export const Contact: FC = () => {
   return (
     <>
       <Header />
-      <div>Contact</div>
+      <main>Contact</main>
     </>
   );
 };

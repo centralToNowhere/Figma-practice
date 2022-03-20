@@ -1,11 +1,11 @@
 import React, { FC } from "react";
 import { Header } from "@/components/Header/Header";
 
-export const Expertise: FC = () => {
+export const Portfolio: FC = () => {
   return (
     <>
       <Header />
-      <main>Expertise</main>
+      <main>Portfolio</main>
     </>
   );
 };
