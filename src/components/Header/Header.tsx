@@ -2,7 +2,7 @@ import React, { FC } from "react";
 import { routeNames } from "@/routes/routeNames";
 import { Navigation } from "@/components/Navigation/Navigation";
 import { NavSidebar } from "@/components/NavSidebar/NavSidebar";
-import { NavLink } from "@/components/NavLink/NavLink";
+import { Link } from "react-router-dom";
 import "./header.sass";
 
 interface HeaderProps {
@@ -17,7 +17,7 @@ export const Header: FC<HeaderProps> = ({ homepage = false }) => {
           <NavSidebar />
           {homepage ? null : (
             <div className={"header__logo"}>
-              <NavLink to={routeNames.homepage}>Logo Here</NavLink>
+              <Link to={routeNames.homepage}>Logo Here</Link>
             </div>
           )}
         </div>

@@ -1,0 +1,12 @@
+@use "/src/styles/mixins"
+@use "/src/styles/breakpoints"
+
+.chat-icon-container
+  position: relative
+
+.chat-icon
+  position: absolute
+  right: 62px
+
+  @include mixins.media-breakpoint-max(breakpoints.$sm-min)
+    right: 0
