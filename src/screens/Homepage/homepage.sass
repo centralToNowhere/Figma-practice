@@ -69,15 +69,23 @@
     @include mixins.media-breakpoint-max(breakpoints.$sm-min)
       justify-content: center
 
-  &__rect-image
-    padding-left: 60px
-    max-width: calc(100% - 60px)
+  &__promo-rectangle
     position: absolute
     right: 62px
     z-index: -1
 
+    @include mixins.media-breakpoint-max(breakpoints.$sm-min)
+      width: 100%
+
+  &__rect-image
+    max-width: calc(100% - 60px)
+    position: absolute
+    left: 60px
+    top: 0
+    z-index: 1
+
     @include mixins.media-breakpoint-max(breakpoints.$lg-min)
-      filter: brightness(25%)
+      filter: brightness(55%)
 
     @include mixins.media-breakpoint-max(breakpoints.$sm-min)
       padding-left: 20px
@@ -111,26 +119,21 @@
       margin-bottom: 0
 
   &__rect-bottom
-    position: absolute
     width: 350px
     height: 383px
-    top: 202px
-    right: 17.7%
+    margin-top: 202px
+    margin-right: 165px
     background: colors.$accent
     border-radius: 10px
-    z-index: -1
-
-    @include mixins.media-breakpoint-max(breakpoints.$md-min)
-      right: 22%
 
     @include mixins.media-breakpoint-max(breakpoints.$sm-min)
-      right: 0
       border-bottom-right-radius: initial
 
     @include mixins.media-breakpoint-max(breakpoints.$xs-min)
       background: black
       width: 100%
       border-radius: 0
+      margin-left: 62px
 
 
   /** Services card **/
@@ -192,7 +195,6 @@
     display: flex
     background: colors.$light-accent
 
-
     @include mixins.media-breakpoint-max(breakpoints.$xl-min)
       flex-wrap: wrap
 
@@ -209,6 +211,10 @@
     min-width: 607px
     margin-left: 42px
 
+    &_second
+      @extend .home__feature-card-image
+      border-radius: 10px
+
     @include mixins.media-breakpoint-max(breakpoints.$xl-min)
       margin: 0 auto
       min-width: 100%
@@ -217,9 +223,14 @@
     position: relative
     width: 684px
     flex-grow: 1
+    flex-shrink: 1
     padding: 127px 34px 0 81px
     z-index: 1
     min-height: 580px
+
+    &_second
+      @extend .home__feature-card-right
+      padding-top: 59px
 
     @include mixins.media-breakpoint-max(breakpoints.$xl-min)
       padding-left: 40px
@@ -239,7 +250,13 @@
     margin-bottom: 40px
 
   &__feature-card-buttons
+    display: flex
+    gap: 42px
     padding: 41px 0 125px 0
+    flex-wrap: wrap
+
+    @include mixins.media-breakpoint-max(breakpoints.$sm-min)
+      justify-content: center
 
   &__feature-card-line
     background: url("/src/assets/images/curvedLine1.png")
@@ -250,6 +267,32 @@
     height: 579px
     z-index: -1
 
+  /** Testinomials **/
 
+  &__testimonials
+    display: flex
+    padding: 50px 136px 89px 100px
+    background: colors.$light-blue
+
+    @include mixins.media-breakpoint-max(breakpoints.$xl-min)
+      flex-wrap: wrap
+      padding-left: 40px
+      padding-right: 40px
+
+  &__testimonials-desc
+    padding-top: 25px
+    min-width: min(420px, 100%)
+
+    p
+      font-family: Poppins, sans-serif
+      font-weight: 600
+      font-size: 18px
+      line-height: 27px
+      margin-top: 12px
+      margin-bottom: 57px
+
+  &__about-pacioli
+    padding: 0 0 57px 100px
+    background: colors.$light-blue
 
 

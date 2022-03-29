@@ -1,0 +1,97 @@
+@use "/src/styles/colors"
+@use "/src/styles/mixins"
+@use "/src/styles/breakpoints"
+
+.testimonial-slider
+  display: flex
+  margin: 0 auto
+
+.testimonial-card-container
+  margin: 0 29px 45px
+  position: relative
+
+.testimonial-card
+  max-width: 500px
+  padding: 20px 18px 25px 24px
+  background: colors.$light
+  border-radius: 10px
+
+  &__avatar
+    max-width: 50px
+
+  &__text
+    font-family: Poppins, sans-serif
+    font-weight: 300
+    font-size: 14px
+    line-height: 35px
+
+  &__reviewer-name
+    @extend .testimonial-card__text
+    font-weight: 500
+    line-height: 21px
+    margin-top: 18px
+
+  &__company-info
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    margin-top: 10px
+
+  &__reviewer-position
+    @extend .testimonial-card__text
+    font-weight: 400
+    line-height: 21px
+
+  &__reviewer-company
+    @extend .testimonial-card__reviewer-name
+    margin-top: 0
+
+.testimonial-card-shadow
+  position: absolute
+  z-index: -1
+  background: colors.$grey
+  top: 85px
+  bottom: -45px
+  left: 79px
+  right: -31px
+  border-radius: 10px
+
+.testimonial-arrows
+  padding-top: 112px
+  padding-left: 24px
+
+.testimonial-arrow-prev
+  width: 40px
+  height: 40px
+  border-radius: 40px
+  border: 2px solid colors.$accent
+  position: relative
+  cursor: pointer
+
+  &_disabled
+    @extend .testimonial-arrow-prev
+    border: none
+    background: colors.$dark
+
+  &::before
+    content: url("/src/assets/images/arrow-prev.png")
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    font-size: 0
+
+.testimonial-arrow-next
+  @extend .testimonial-arrow-prev
+  margin-top: 17px
+
+  &_disabled
+    @extend .testimonial-arrow-next, .testimonial-arrow-prev_disabled
+
+  &::before
+    content: url("/src/assets/images/arrow-next.png")
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    font-size: 0

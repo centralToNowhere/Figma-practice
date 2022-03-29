@@ -7,8 +7,11 @@ import ServiceIcon1 from "@/assets/images/Service-icon1.png";
 import ServiceIcon2 from "@/assets/images/Service-icon2.png";
 import ServiceIcon3 from "@/assets/images/Service-icon3.png";
 import ServiceIcon4 from "@/assets/images/Service-icon4.png";
+import TestimonialAvatar from "@/assets/images/testimonials/TestimonialAvatar.png";
 import { Button } from "@/components/Button/Button";
 import { ChatIcon } from "@/components/Chat/ChatIcon";
+import { TestimonialSlider } from "@/components/TestimonialSlider/TestimonialSlider";
+import { Title } from "@/components/Title/Title";
 import "./homepage.sass";
 
 export const Homepage: FC = () => {
@@ -40,12 +43,14 @@ export const Homepage: FC = () => {
               <Button content={"Schedule a call"} type="secondary" />
             </div>
           </div>
-          <div className="home__rect-bottom" />
-          <img
-            src={PromoImage1}
-            alt="software development process"
-            className="home__rect-image"
-          />
+          <div className="home__promo-rectangle">
+            <div className="home__rect-bottom" />
+            <img
+              src={PromoImage1}
+              alt="software development process"
+              className="home__rect-image"
+            />
+          </div>
         </section>
         <ChatIcon />
         <section>
@@ -143,6 +148,74 @@ export const Homepage: FC = () => {
               </p>
               <div className="home__feature-card-buttons">
                 <Button content={"Partnership Details"} />
+              </div>
+            </div>
+          </div>
+        </section>
+        <section>
+          <h2 className="home__heading_hidden">Testimonials</h2>
+          <div className="home__testimonials">
+            <div className="home__testimonials-desc">
+              <Title
+                children={<h2 className="heading-small">TESTIMONIALS</h2>}
+              />
+              <p>See how are clients feel about us.</p>
+            </div>
+            <TestimonialSlider
+              testimonials={[
+                {
+                  content:
+                    "Working with the PETRONG team has been a huge success! They're\n" +
+                    "good people who care deeply about our business!",
+                  avatarUrl: TestimonialAvatar,
+                  name: "John Doe",
+                  position: "CEO",
+                  company: "Leonard Technologies",
+                },
+                {
+                  content:
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt" +
+                    " ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco" +
+                    " laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in" +
+                    " voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat" +
+                    " non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+                  avatarUrl: TestimonialAvatar,
+                  name: "Eod Nhoj",
+                  position: "Team Leader",
+                  company: "Brain Dead Software",
+                },
+              ]}
+            />
+          </div>
+        </section>
+        <div className="home__about-pacioli">
+          <Title children={<h2 className="heading-small">ABOUT PACIOLI</h2>} />
+        </div>
+        <section>
+          <h2 className="home__heading_hidden">Petrong & Pacioli</h2>
+          <div className="home__feature-card">
+            <div className="home__feature-card-left">
+              <img
+                src={PromoImage3}
+                alt="office"
+                className="home__feature-card-image_second"
+              />
+            </div>
+            <div className="home__feature-card-right_second">
+              <h2 className="home__feature-card-heading">Petrong & Pacioli</h2>
+              <p>
+                Pacioli is the flagship product at petrong software solutions, a
+                tailored digital lending tools that helps microfinance
+                institutions to efficiently and quickly onboard customers and to
+                account reconciliation with financial inclution as the
+                motivation.
+                <br />
+                Pacioli improves female customers comfort with the service by
+                specifically design for unique constraint.
+              </p>
+              <div className="home__feature-card-buttons">
+                <Button content={"Pacioli"} />
+                <Button content={"Demo Video"} />
               </div>
             </div>
           </div>
