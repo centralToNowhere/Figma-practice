@@ -5,13 +5,14 @@
   "main": "index.js",
   "scripts": {
     "build": "npm run build:prod",
-    "build:prod": "NODE_ENV=production webpack --config ./webpack-prod.config.js",
-    "build:dev": "NODE_ENV=development webpack --config ./webpack-dev.config.js",
+    "build:prod": "npm run clean && NODE_ENV=production webpack --config ./webpack-prod.config.js",
+    "build:dev": "npm run clean && NODE_ENV=development webpack --config ./webpack-dev.config.js",
     "types": "npx tsc",
     "serve": "NODE_ENV=development webpack serve --config ./webpack-dev.config.js  --entry ./src/index.tsx",
     "serve:prod": "webpack serve --config ./webpack-prod.config.js  --entry ./src/index.tsx",
     "lint": "eslint --ext .js,.jsx,.ts,.tsx --fix ./",
-    "check": "npm run types && npm run lint"
+    "check": "npm run types && npm run lint",
+    "clean": "rm -rf dist"
   },
   "repository": {
     "type": "git",

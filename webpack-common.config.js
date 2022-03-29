@@ -1,5 +1,6 @@
 const path = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
   entry: "./src/index.tsx",
@@ -13,7 +14,11 @@ module.exports = {
     port: 3000,
     historyApiFallback: true,
   },
-  plugins: [],
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: "./public/index.html",
+    }),
+  ],
   module: {
     rules: [
       {
@@ -41,8 +46,19 @@ module.exports = {
       },
       {
         test: /\.(svg|png|jpg|gif)$/i,
-        exclude: "/src/assets/fonts",
+        exclude: ["/src/assets/fonts", "/src/assets/images/testimonials"],
         type: "asset",
+      },
+      {
+        test: /\.(svg|png|jpg|gif)$/i,
+        exclude: [
+          "/src/assets/fonts",
+          /src\/assets\/images\/(?!(testimonials)\/).*/,
+        ],
+        type: "asset",
+        generator: {
+          filename: "./testimonials/[name][ext]",
+        },
       },
       {
         test: /\.(svg|eot|ttf|woff|woff2)$/i,
