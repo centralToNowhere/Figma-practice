@@ -8,11 +8,18 @@ import ServiceIcon2 from "@/assets/images/Service-icon2.png";
 import ServiceIcon3 from "@/assets/images/Service-icon3.png";
 import ServiceIcon4 from "@/assets/images/Service-icon4.png";
 import TestimonialAvatar from "@/assets/images/testimonials/TestimonialAvatar.png";
+import PromiseIcon1 from "@/assets/images/promise-icon1.svg"
+import PromiseIcon2 from "@/assets/images/promise-icon2.svg"
+import PromiseIcon3 from "@/assets/images/promise-icon3.svg"
+import PromiseIcon4 from "@/assets/images/promise-icon4.svg"
+import PromiseIcon5 from "@/assets/images/promise-icon5.svg"
+import PromiseIcon6 from "@/assets/images/promise-icon6.svg"
 import { Button } from "@/components/Button/Button";
 import { ChatIcon } from "@/components/Chat/ChatIcon";
 import { TestimonialSlider } from "@/components/TestimonialSlider/TestimonialSlider";
 import { Title } from "@/components/Title/Title";
 import "./homepage.sass";
+import {WorkInvite} from "@/components/WorkInvite/WorkInvite";
 
 export const Homepage: FC = () => {
   return (
@@ -220,6 +227,113 @@ export const Homepage: FC = () => {
             </div>
           </div>
         </section>
+        <section>
+          <h2 className="home__heading_hidden">Our Promise</h2>
+          <div className="home__promise">
+            <div className="home__promise-heading-container">
+              <h2 className="home__promise-heading">Our Promise</h2>
+              <p className="home__promise-description">
+                As part of our high quality service, we'd like to offer something extra too.
+              </p>
+            </div>
+            <div className="home__promise-item">
+              <div className="home__promise-item-heading-container">
+                <img
+                  className="home__promise-item-icon"
+                  alt="promise item icon"
+                  src={PromiseIcon1}
+                />
+                <h3 className="home__promise-item-heading">Top Code Quality</h3>
+              </div>
+              <p className="home__promise-item-description">
+                What we promise is not simply code
+                but rather a solution. You get a W3C
+                fully compliant markup with no
+                compromise on quality.
+              </p>
+            </div>
+            <div className="home__promise-item">
+              <div className="home__promise-item-heading-container">
+                <img
+                  className="home__promise-item-icon"
+                  alt="promise item icon"
+                  src={PromiseIcon2}
+                />
+                <h3 className="home__promise-item-heading">Responsive</h3>
+              </div>
+              <p className="home__promise-item-description">
+                We know you look for positive attitude,
+                timely reactions, and flexibility. We are
+                here to listen and give the utmost
+                of our capabilities.
+              </p>
+            </div>
+            <div className="home__promise-item">
+              <div className="home__promise-item-heading-container">
+                <img
+                  className="home__promise-item-icon"
+                  alt="promise item icon"
+                  src={PromiseIcon3}
+                />
+                <h3 className="home__promise-item-heading">Rockstar Team</h3>
+              </div>
+              <p className="home__promise-item-description">
+                Expertise is our USP. You get an all-star
+                squad of experienced geeks, fully at
+                your service and armed with coding
+                skills to die for.
+              </p>
+            </div>
+            <div className="home__promise-item">
+              <div className="home__promise-item-heading-container">
+                <img
+                  className="home__promise-item-icon"
+                  alt="promise item icon"
+                  src={PromiseIcon4}
+                />
+                <h3 className="home__promise-item-heading">Fast Turn-arounds</h3>
+              </div>
+              <p className="home__promise-item-description">
+                Speed matters no less than quality. We
+                are fast, agile and capable of delivering
+                top notch quality code in a timeframe
+                chosen by you.
+              </p>
+            </div>
+            <div className="home__promise-item">
+              <div className="home__promise-item-heading-container">
+                <img
+                  className="home__promise-item-icon"
+                  alt="promise item icon"
+                  src={PromiseIcon5}
+                />
+                <h3 className="home__promise-item-heading">Life-time support</h3>
+              </div>
+              <p className="home__promise-item-description">
+                The ultimate proof of our code quality:
+                you get our non-expiring support. If any
+                bugs happen to appear in the future,
+                just write us a line.
+              </p>
+            </div>
+            <div className="home__promise-item">
+              <div className="home__promise-item-heading-container">
+                <img
+                  className="home__promise-item-icon"
+                  alt="promise item icon"
+                  src={PromiseIcon6}
+                />
+                <h3 className="home__promise-item-heading">Secured Agreement</h3>
+              </div>
+              <p className="home__promise-item-description">
+                Your artwork is fully yours and we would
+                never claim otherwise. You get our word
+                and our full willingness to sign an NDA.
+              </p>
+            </div>
+          </div>
+        </section>
+        <WorkInvite/>
       </main>
     </>
   );

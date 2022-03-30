@@ -295,4 +295,77 @@
     padding: 0 0 57px 100px
     background: colors.$light-blue
 
+  /** Our Promise **/
+  &__promise
+    display: flex
+    flex-wrap: wrap
+    padding: 113px 50.5px 134px 50.5px
+
+  &__promise-item-heading-container
+    display: flex
+
+  &__promise-heading-container
+    width: 100%
+    text-align: center
+    margin-bottom: 58px
+
+  &__promise-heading
+    font-family: Poppins, sans-serif
+    font-weight: 700
+    font-size: 36px
+    line-height: 54px
+
+  &__promise-description
+    font-family: Poppins, sans-serif
+    font-weight: 500
+    font-size: 14px
+    line-height: 35px
+    margin-top: 10px
+
+  &__promise-item
+    margin: 0 12.5px 23px 12.5px
+    padding-top: 50px
+    display: flex
+    flex-direction: column
+    flex-wrap: wrap
+    flex: 1 1 calc(33% - 50px)
+    background: colors.$light-accent30
+    border-radius: 10px
+
+    @include mixins.media-breakpoint-max(breakpoints.$lg-min)
+      flex: 1 1 calc(50% - 50px)
+
+    @include mixins.media-breakpoint-max(breakpoints.$md-min)
+      flex: 1 1 calc(100% - 50px)
+
+  &__promise-item-heading
+    font-family: Poppins, sans-serif
+    font-weight: 600
+    font-size: 24px
+    line-height: 36px
+    display: inline-block
+
+
+  &__promise-item-icon
+    margin-left: 24px
+    margin-right: 12px
+    max-height: 36px
+    display: inline-block
+
+    @include mixins.media-breakpoint-max(breakpoints.$md-min)
+      margin-left: 0
+
+  &__promise-item-description
+    padding: 13px 16px 72px 67px
+    font-family: Poppins, sans-serif
+    font-weight: 400
+    font-size: 14px
+    line-height: 35px
+
+    @include mixins.media-breakpoint-max(breakpoints.$md-min)
+      padding-left: 0
+      padding-right: 0
+      padding-bottom: 0
+
+
 
