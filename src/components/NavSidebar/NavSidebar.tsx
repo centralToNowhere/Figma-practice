@@ -40,7 +40,7 @@ export const NavSidebar = () => {
           toggled ? " nav-sidebar__menu_toggled" : ""
         }`}
       >
-        <Navigation sidebar={true} />
+        <Navigation type="sidebar" />
       </div>
     </div>
   );

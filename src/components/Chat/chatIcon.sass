@@ -1,12 +1,21 @@
 @use "/src/styles/mixins"
+@use "/src/styles/colors"
 @use "/src/styles/breakpoints"
 
 .chat-icon-container
+  width: 80px
+  height: 80px
   position: relative
+  border-radius: 80px 0 80px 80px
+
+  &_primary
+    background: colors.$accent
+
+  &_secondary
+    background: colors.$light
 
 .chat-icon
   position: absolute
-  right: 62px
-
-  @include mixins.media-breakpoint-max(breakpoints.$sm-min)
-    right: 0
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)

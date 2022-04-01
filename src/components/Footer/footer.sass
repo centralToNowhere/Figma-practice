@@ -1,0 +1,124 @@
+@use "/src/styles/colors"
+@use "/src/styles/mixins"
+@use "/src/styles/breakpoints"
+
+.footer
+  min-height: 563px
+  background: colors.$footer-bg
+  overflow: hidden
+  position: relative
+
+  &::before
+    content: url("/src/assets/images/world.svg")
+    position: absolute
+    top: 53px
+    left: 70px
+    right: 87px
+
+  &__table
+    padding-top: 73px
+    margin: 0 146px
+    display: flex
+    position: relative
+    justify-content: space-around
+    flex-wrap: wrap
+
+  &__table-col
+    display: flex
+    flex-direction: column
+
+  &__table-col-heading
+    font-family: Montserrat, sans-serif
+    font-weight: 600
+    font-size: 16px
+    line-height: 19.5px
+    color: colors.$light
+    margin-bottom: 16px
+
+  &__links
+    display: flex
+    flex-direction: column
+    flex-wrap: wrap
+
+  &__link
+    text-decoration: none
+    font-family: Montserrat, sans-serif
+    font-weight: 400
+    font-size: 13px
+    line-height: 22px
+    color: colors.$grey2
+
+  &__phone
+    display: inline
+    vertical-align: middle
+    font-family: Montserrat, sans-serif
+    font-weight: 400
+    font-size: 13px
+    line-height: 22px
+    color: colors.$light
+    margin-bottom: 5px
+
+    &::before
+      display: inline
+      vertical-align: bottom
+      margin-right: 10px
+      line-height: 0
+      content: url("/src/assets/images/phone-icon.svg")
+
+  &__email
+    @extend .footer__phone
+    color: colors.$light
+
+    &::before
+      @extend .footer__phone, ::before
+      content: url("/src/assets/images/email-icon.svg")
+      vertical-align: top
+
+    &_color_accent
+      color: colors.$accent
+
+  &__logo
+    margin-top: 60px
+
+  &__copyright
+    position: absolute
+    left: 101px
+    bottom: 51px
+    font-family: Montserrat, sans-serif
+    font-weight: 400
+    font-size: 13px
+    line-height: 22px
+    color: colors.$light
+
+  &__chat-icon-container
+    position: absolute
+    bottom: 59px
+    right: 62px
+
+    @include mixins.media-breakpoint-max(breakpoints.$sm-min)
+      right: 0
+
+.nav-quick-links
+  height: 100px
+
+  &__link
+    @extend .footer__link
+    max-width: 70px
+
+.social-media
+  display: flex
+  margin: -10px -4.5px 0 -4.5px
+
+  &__container
+    position: relative
+    width: 40px
+    height: 38.5px
+    border-radius: 40px
+    background: colors.$dark-blue
+    margin: 4.5px
+
+  &__icon
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)

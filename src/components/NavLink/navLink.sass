@@ -3,16 +3,15 @@
 @use "/src/styles/breakpoints"
 
 .nav-link
-  a
-    text-decoration: none
-    color: colors.$light
-    font-family: Poppins, sans-serif
-    font-weight: 500
-    font-size: 14px
+  text-decoration: none
+  color: colors.$light
+  font-family: Poppins, sans-serif
+  font-weight: 500
+  font-size: 14px
 
-  &.active
-    a
-      color: colors.$accent
+  &_active
+    @extend .nav-link
+    color: colors.$accent
 
   @include mixins.media-breakpoint-max(breakpoints.$xl-min)
     display: none

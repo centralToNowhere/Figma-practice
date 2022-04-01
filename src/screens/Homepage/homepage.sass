@@ -136,6 +136,13 @@
       margin-left: 62px
 
 
+  &__chat-icon-container
+    position: absolute
+    right: 62px
+
+    @include mixins.media-breakpoint-max(breakpoints.$sm-min)
+      right: 0
+
   /** Services card **/
   &__services
     padding: 134px 62px 108px 101px
@@ -366,6 +373,5 @@
       padding-left: 0
       padding-right: 0
       padding-bottom: 0
-
 
 

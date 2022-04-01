@@ -1,15 +1,30 @@
 import React, { FC } from "react";
-import { Link, useResolvedPath, useMatch } from "react-router-dom";
+import { NavLink as RouterNavLink } from "react-router-dom";
 import type { LinkProps } from "react-router-dom";
 import "./navLink.sass";
 
-export const NavLink: FC<LinkProps> = ({ to, children }) => {
-  const resolved = useResolvedPath(to);
-  const match = useMatch({ path: resolved.pathname, end: true });
+interface NavLinkProps extends LinkProps {
+  highlight?: boolean;
+  cls?: string;
+  activeCls?: string;
+}
+
+export const NavLink: FC<NavLinkProps> = ({
+  to,
+  children,
+  highlight = true,
+  cls,
+  activeCls,
+}) => {
+  const isActiveLink = (props: { isActive: boolean }): string => {
+    return highlight && props.isActive
+      ? activeCls || "nav-link_active"
+      : cls || "nav-link";
+  };
 
   return (
-    <div className={`nav-link${match ? " active" : ""}`}>
-      <Link to={to}>{children}</Link>
-    </div>
+    <RouterNavLink to={to} className={isActiveLink}>
+      {children}
+    </RouterNavLink>
   );
 };

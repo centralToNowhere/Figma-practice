@@ -5,16 +5,15 @@ import "./navigation.sass";
 
 interface NavigationProps {
   homepage?: boolean;
-  sidebar?: boolean;
+  type?: "header" | "sidebar" | "footer";
 }
 
 export const Navigation: FC<NavigationProps> = ({
   homepage = false,
-  sidebar = false,
+  type = "header",
 }) => {
-  const className = `main-nav
-    ${homepage ? " main-nav_homepage" : ""}
-    ${sidebar ? " sidebar" : ""}`;
+  const className = `main-nav main-nav__type_${type}
+    ${homepage ? " main-nav_homepage" : ""}`;
 
   return (
     <nav className={className}>
