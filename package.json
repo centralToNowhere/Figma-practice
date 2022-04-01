@@ -23,7 +23,7 @@
   "bugs": {
     "url": "https://github.com/centralToNowhere/Figma-practice/issues"
   },
-  "homepage": "https://github.com/centralToNowhere/Figma-practice#readme",
+  "homepage": "https://github.com/centralToNowhere/Figma-practice",
   "dependencies": {
     "@babel/runtime": "^7.17.7",
     "react": "^17.0.2",
