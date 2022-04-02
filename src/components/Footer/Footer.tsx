@@ -30,7 +30,7 @@ export const Footer: FC = () => {
             >
               About
             </NavLink>
-            <NavLink to={"/#projects"} highlight={false} cls={navQuickLinkCls}>
+            <NavLink to={"/#projects"} cls={navQuickLinkCls}>
               Projects
             </NavLink>
             <NavLink
@@ -51,7 +51,10 @@ export const Footer: FC = () => {
             >
               Our Policy
             </NavLink>
-            <NavLink to={"/#career"} highlight={false} cls={navQuickLinkCls}>
+            <NavLink
+              to={"/#career"}
+              cls={navQuickLinkCls}
+            >
               Career
             </NavLink>
           </nav>
@@ -71,7 +74,10 @@ export const Footer: FC = () => {
             >
               Digital Product Design
             </NavLink>
-            <NavLink to={"/#cloud-devops"} highlight={false} cls={navLinkCls}>
+            <NavLink
+              to={"/#cloud-devops"}
+              cls={navLinkCls}
+            >
               Cloud/DevOps
             </NavLink>
             <NavLink
@@ -86,7 +92,10 @@ export const Footer: FC = () => {
             >
               Dedicated Development
             </NavLink>
-            <NavLink to={"/#team"} highlight={false} cls={navLinkCls}>
+            <NavLink
+              to={"/#team"}
+              cls={navLinkCls}
+            >
               Team
             </NavLink>
           </nav>
@@ -102,7 +111,6 @@ export const Footer: FC = () => {
             </NavLink>
             <NavLink
               to={"/#react-js-app-development"}
-              highlight={false}
               cls={navLinkCls}
             >
               React JS App Development
