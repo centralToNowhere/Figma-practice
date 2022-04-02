@@ -1,10 +1,14 @@
+@use "/src/styles/mixins"
+@use "/src/styles/breakpoints"
+
 .main-nav
   display: flex
   gap: 40px
   margin-left: auto
 
-  &_homepage
-    gap: 21px
+  &__type_header
+    @include mixins.media-breakpoint-max(breakpoints.$xl-min)
+      display: none
 
   &__type_sidebar
     display: flex

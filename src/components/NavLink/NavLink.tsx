@@ -12,7 +12,7 @@ interface NavLinkProps extends LinkProps {
 export const NavLink: FC<NavLinkProps> = ({
   to,
   children,
-  highlight = true,
+  highlight = false,
   cls,
   activeCls,
 }) => {

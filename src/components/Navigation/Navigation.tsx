@@ -17,12 +17,12 @@ export const Navigation: FC<NavigationProps> = ({
 
   return (
     <nav className={className}>
-      <NavLink to={routeNames.about}>ABOUT</NavLink>
-      <NavLink to={routeNames.portfolio}>PORTFOLIO</NavLink>
-      <NavLink to={routeNames.product}>PRODUCT</NavLink>
-      <NavLink to={routeNames.expertise}>EXPERTISE</NavLink>
-      <NavLink to={routeNames.contact}>CONTACT</NavLink>
-      <NavLink to={routeNames.blog}>BLOG</NavLink>
+      <NavLink to={routeNames.about} highlight={true}>ABOUT</NavLink>
+      <NavLink to={routeNames.portfolio} highlight={true}>PORTFOLIO</NavLink>
+      <NavLink to={routeNames.product} highlight={true}>PRODUCT</NavLink>
+      <NavLink to={routeNames.expertise} highlight={true}>EXPERTISE</NavLink>
+      <NavLink to={routeNames.contact} highlight={true}>CONTACT</NavLink>
+      <NavLink to={routeNames.blog} highlight={true}>BLOG</NavLink>
     </nav>
   );
 };

@@ -20,14 +20,12 @@ export const Footer: FC = () => {
           <nav className="footer__links nav-quick-links">
             <NavLink
               to={routeNames.homepage}
-              highlight={false}
               cls={navQuickLinkCls}
             >
               Home
             </NavLink>
             <NavLink
               to={routeNames.about}
-              highlight={false}
               cls={navQuickLinkCls}
             >
               About
@@ -37,21 +35,18 @@ export const Footer: FC = () => {
             </NavLink>
             <NavLink
               to={routeNames.contact}
-              highlight={false}
               cls={navQuickLinkCls}
             >
               Contact
             </NavLink>
             <NavLink
               to={routeNames.blog}
-              highlight={false}
               cls={navQuickLinkCls}
             >
               Blog
             </NavLink>
             <NavLink
               to={"/#our-policy"}
-              highlight={false}
               cls={navQuickLinkCls}
             >
               Our Policy
@@ -66,14 +61,12 @@ export const Footer: FC = () => {
           <nav className="footer__links">
             <NavLink
               to={"/#web-development"}
-              highlight={false}
               cls={navLinkCls}
             >
               Web Development
             </NavLink>
             <NavLink
               to={"/#digital-product-design"}
-              highlight={false}
               cls={navLinkCls}
             >
               Digital Product Design
@@ -83,14 +76,12 @@ export const Footer: FC = () => {
             </NavLink>
             <NavLink
               to={"/#mobile-applications"}
-              highlight={false}
               cls={navLinkCls}
             >
               Mobile Applications
             </NavLink>
             <NavLink
               to={"/dedicated-development"}
-              highlight={false}
               cls={navLinkCls}
             >
               Dedicated Development
@@ -105,7 +96,6 @@ export const Footer: FC = () => {
           <nav className="footer__links">
             <NavLink
               to={"/#laravel-development"}
-              highlight={false}
               cls={navLinkCls}
             >
               Laravel Development
@@ -119,7 +109,6 @@ export const Footer: FC = () => {
             </NavLink>
             <NavLink
               to={"/#vue-js-app-development"}
-              highlight={false}
               cls={navLinkCls}
             >
               Vue JS App Development
