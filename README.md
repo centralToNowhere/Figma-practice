@@ -1,2 +1,4 @@
 # Figma-practice
-React & SASS practice with Figma template
+React & SASS practice with Figma community template
+
+![Figma Template](./template.jpg)
