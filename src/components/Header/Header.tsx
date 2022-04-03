@@ -21,7 +21,7 @@ export const Header: FC<HeaderProps> = ({ homepage = false }) => {
             </div>
           )}
         </div>
-        <Navigation type="header"/>
+        <Navigation type="header" />
       </header>
     </div>
   );
